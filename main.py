@@ -193,7 +193,7 @@ def main():
         threading.Thread(target=auto_update, name="self-upgrade", daemon=True).start()
         threading.Thread(target=warm_up_modules, name="warm-up", daemon=True).start()
 
-    #auto_opentab_delay()
+    auto_opentab_delay()
     demo.queue(concurrency_count=CONCURRENT_COUNT).launch(server_name="0.0.0.0", server_port=PORT, auth=AUTHENTICATION, favicon_path="docs/logo.png",share=True)
 
     # 如果需要在二级路径下运行
